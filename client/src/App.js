@@ -6,6 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import TreeComponent from "./Components/Tree/TreeComponent";
 import { ScrollToTop } from "./Components/ScrollToTop/ScrollToTop";
+import DatabaseExample from "./Components/DatabaseExample/DatabaseExample";
 
 export default function App() {
   React.useEffect(() => {
@@ -28,7 +29,7 @@ export default function App() {
         <TreeComponent />
       </section>
       <ScrollToTop />
-      <div style={{ paddingBottom: '500px' }}></div>
+      <DatabaseExample />
     </div>
   );
 }

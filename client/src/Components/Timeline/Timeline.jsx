@@ -8,7 +8,6 @@ import "react-vertical-timeline-component/style.min.css";
 
 import WorkIcon from "@material-ui/icons/Work";
 import SchoolIcon from "@material-ui/icons/School";
-import StarRateIcon from "@material-ui/icons/StarRate";
 
 export const Timeline = () => {
 

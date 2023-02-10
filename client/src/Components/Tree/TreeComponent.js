@@ -21,7 +21,7 @@ import Badge from "@material-ui/core/Badge";
 import Tooltip from "@material-ui/core/Tooltip";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import organization from "./org.json";
+import organization from "./treeContent.json";
 
 import {
   createMuiTheme,
@@ -71,7 +71,7 @@ function Organization({ org, onCollapse, collapsed }) {
         avatar={
           <Tooltip
             title={`${_.size(
-              org.organizationChildRelationship
+              org.parentChildRelationship
             )} Sub Profile, ${_.size(org.account)} Sub Account`}
             arrow
           >
@@ -85,7 +85,7 @@ function Organization({ org, onCollapse, collapsed }) {
               showZero
               invisible={!collapsed}
               overlap="circle"
-              badgeContent={_.size(org.organizationChildRelationship)}
+              badgeContent={_.size(org.parentChildRelationship)}
               onClick={onCollapse}
             >
               <Avatar className={classes.avatar}>
@@ -94,7 +94,7 @@ function Organization({ org, onCollapse, collapsed }) {
             </Badge>
           </Tooltip>
         }
-        title={org.tradingName}
+        title={org.parent}
         action={
           <IconButton size="small" onClick={handleClick}>
             <MoreVertIcon />
@@ -180,36 +180,36 @@ function Node({ o, parent, root }) {
       </Tree>
     );
   return collapsed ?
-  (
-    <T
-      label={
-        <Organization
-          org={o}
-          onCollapse={handleCollapse}
-          collapsed={collapsed}
-        />
-      }
-    />
-  ) : (
-    <T
-      label={
-        <Organization
-          org={o}
-          onCollapse={handleCollapse}
-          collapsed={collapsed}
-        />
-      }
-    >
-      {_.map(o.account, (a) => (
-        <TreeNode label={<Account a={a} />}>
-          <TreeNode label={<Product p={a.product} />} />
-        </TreeNode>
-      ))}
-      {_.map(o.organizationChildRelationship, (c) => (
-        <Node o={c} parent={o} root={false}/>
-      ))}
-    </T>
-  );
+    (
+      <T
+        label={
+          <Organization
+            org={o}
+            onCollapse={handleCollapse}
+            collapsed={collapsed}
+          />
+        }
+      />
+    ) : (
+      <T
+        label={
+          <Organization
+            org={o}
+            onCollapse={handleCollapse}
+            collapsed={collapsed}
+          />
+        }
+      >
+        {_.map(o.entry, (a) => (
+          <TreeNode label={<Account a={a} />}>
+            <TreeNode label={<Product p={a.description} />} />
+          </TreeNode>
+        ))}
+        {_.map(o.parentChildRelationship, (c) => (
+          <Node o={c} parent={o} root={false} />
+        ))}
+      </T>
+    );
 }
 const theme = createMuiTheme({
   palette: {
@@ -224,7 +224,7 @@ export default function TreeComponent(props) {
       <ThemeProvider theme={theme}>
         <Box bgcolor="background" padding={4} height="80vh">
           <DndProvider backend={HTML5Backend}>
-            <Node o={organization} root={true}/>
+            <Node o={organization} root={true} />
           </DndProvider>
         </Box>
       </ThemeProvider>

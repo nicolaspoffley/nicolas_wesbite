@@ -1,0 +1,91 @@
+{
+  "parent": "Relevant Experience for EP-AIP-PAP",
+  "parentChildRelationship": [
+    {
+      "parent": "Java",
+      "entry": [
+        {
+          "name": "AnyLogic Professional Simulation Software",
+          "description": { "name": "In the Simulation team at PwC, we used AnyLogic Professional, which is java-based. The majority of my work consisted of modifying simulations using Java, and creating/modifying API's." }
+        }
+      ],
+      "parentChildRelationship": [
+        {
+          "parent": "Computer Science Course",
+          "entry": [
+            {
+              "name": "2D Platformer Networked Game",
+              "description": { "name": "In a group at University, we created a networked platformer game using Java, with only JavaFX." }
+            },
+            {
+              "name": "Algorithms",
+              "description": { "name": "Implemented a variety of searching and sorting algorithms, such as Dijkstras algorithm, to assist in completing university assignments." }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "parent": "Javascript",
+      "entry": [
+        {
+          "name": "ReactJS",
+          "description": { "name": "Used for the front-end of the full stack product I created at PwC. Also embedded PowerBI into the wesbite." }
+        },
+        {
+          "name": "NodeJS/ ExpressJS",
+          "description": { "name": "Used to create the back-end for the product I built at PwC. Integrated multiple micro-services I created for the product." }
+        }
+        
+      ]
+    },
+    {
+      "parent": "Linux",
+      "entry": [
+        {
+          "name": "Personal OS",
+          "description": { "name": "My personal laptop has an Ubuntu VM which I use for most Computer Science projects." }
+        }
+      ]
+    },
+    {
+      "parent": "Distributed Computing",
+      "entry": [
+        {
+          "name": "Computer Science course",
+          "description": { "name": "This year I completed a Networking/ Distributing Systems course. While it was theoretical, we learnt about leader rlection in a token ring and consensus regarding both synchronous and unsynchronous systems." }
+        }
+      ]
+    },
+    {
+      "parent": "Git",
+      "entry": [
+        {
+          "name": "Github",
+          "description": { "name": "I have used GitHub in various Computer Science projects." }
+        },
+        {
+          "name": "GitLab",
+          "description": { "name": "GitLab is the primary git system used by my University, and as such I have used it for many projects and am currently using it for my final year project." }
+        },
+        {
+          "name": "Azure DevOps",
+          "description": { "name": "I used git within Azure DevOps for my main project at PwC." }
+        }
+      ]
+    },
+    {
+      "parent": "Databases",
+      "entry": [
+        {
+          "name": "SQL",
+          "description": { "name": "For the project at PwC, I used SQL Server hosted within Google Cloud to create for a relational database. In the past I have also sed mySQL and SQLlite." }
+        },
+        {
+          "name": "MongoDB",
+          "description": { "name": "Before using SQL Server for the project I worked on at PwC, I first implemented MongoDB into the stack. Eventually I pivotted to SQL as the advantages of a relational database were needed." }
+        }
+      ]
+    }
+  ]
+}
