@@ -222,7 +222,7 @@ export default function TreeComponent(props) {
   return (
     <div data-aos="fade-up">
       <ThemeProvider theme={theme}>
-        <Box bgcolor="background" padding={4} height="80vh">
+        <Box bgcolor="background" padding={4} height="40vh">
           <DndProvider backend={HTML5Backend}>
             <Node o={organization} root={true} />
           </DndProvider>

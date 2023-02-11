@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 
 export const Navbar = () => {
   const [showNavList, setShowNavList] = React.useState(false);
@@ -12,50 +12,51 @@ export const Navbar = () => {
     setShowNavList(!showNavList);
   };
   return (
-    <>
-      <nav className="center nav">
+    <header className={`${styles.header} ${styles.center}`}>
+      <nav className={`${styles.nav}`}>
         <ul
           style={{ display: showNavList ? "flex" : null }}
-          className="nav__list"
+          className={`${styles.navList}`}
+
         >
-          <li className="nav__list-item">
+          <li className={`${styles.navListItem}`}>
             <a
               href="#home"
               onClick={() => toggleNavList("#home")}
-              className="link link--nav"
+              className={`${styles.link} ${styles.linkNav}`}
             >
               Home
             </a>
           </li>
-          <li className="nav__list-item">
+          <li className={`${styles.navListItem}`}>
             <a
               href="#skills"
               onClick={() => toggleNavList("#skills")}
-              className="link link--nav"
+              className={`${styles.link} ${styles.linkNav}`}
             >
               Skills
             </a>
           </li>
-          <li className="nav__list-item">
+          <li className={`${styles.navListItem}`}>
             <a
               href="#timeline"
               onClick={() => toggleNavList("#timeline")}
-              className="link link--nav"
+              className={`${styles.link} ${styles.linkNav}`}
             >
               Timeline
             </a>
           </li>
-          <li className="nav__list-item">
+          <li className={`${styles.navListItem}`}>
             <a
               href="#EP-AIP-PAP"
               onClick={() => toggleNavList("#EP-AIP-PAP")}
-              className="link link--nav"
+              className={`${styles.link} ${styles.linkNav}`}
             >
               EP-AIP-PAP
             </a>
           </li>
         </ul>
       </nav>
-    </>
+    </header>
   );
 };

@@ -1,0 +1,18 @@
+.about {
+  flex-direction: column;
+  margin-top: 3em;
+}
+.aboutName {
+  color: var(--clr-primary);
+}
+.about > :nth-child(2) {
+  margin-top: 1.2em;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: var(--clr-fg-alt);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}

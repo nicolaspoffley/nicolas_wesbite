@@ -1,6 +1,6 @@
 import { useCallback, useState, useEffect } from "react";
 import axios from "axios";
-import "./DatabaseExample.css";
+import styles from "./DatabaseExample.module.css";
 import { Card, Box, Typography, Button, TextField } from "@material-ui/core";
 import TableComponent from '../Table/TableComponent'
 
@@ -33,9 +33,9 @@ const MainComponent = () => {
   }, []);
 
   return (
-    <Box sx={{ padding: '30px' }}>
-      <Card style={{ padding: '30px' }}>
-        <Typography sx={{ fontSize: 28 }}>
+    <Box className={styles.box}>
+      <Card className={styles.card}>
+        <Typography variant="h4" gutterBottom className={styles.title}>
           Basic PostresSQL Integration
         </Typography>
         <br />

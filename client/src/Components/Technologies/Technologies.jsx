@@ -1,8 +1,7 @@
 import React from "react";
-import "./Technologies.css";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiCypress, SiMicrosoftsqlserver, SiPowerbi, SiLua, SiDocker, SiKubernetes, SiGooglecloud, SiAcademia, SiPython, SiJava } from "react-icons/si";
-
+import styles from './Technologies.module.css'
 import {
   SiHtml5,
   SiMaterialui,
@@ -15,11 +14,11 @@ import { VscGithub } from "react-icons/vsc";
 export const Technologies = () => {
   return (
     <>
-      <div className="section main">
-        <h2 className="section__title different" data-aos="fade-left">
+      <div className={`${styles.section} ${styles.main}`}>
+        <h2 className={`${styles.sectionTitle}`} data-aos="fade-left">
           I have experience with...
         </h2>
-        <div className="techsection">
+        <div className={`${styles.techSection}`}>
           <div data-aos="fade-center">
             <SiJavascript />
             <h5>Javascript</h5>
@@ -93,7 +92,6 @@ export const Technologies = () => {
             <h5>Cypress</h5>
           </div>
         </div>
-        <div style={{padding:'30px'}}></div>
       </div>
     </>
   );

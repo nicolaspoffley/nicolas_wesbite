@@ -1,5 +1,5 @@
 import React from "react";
-import "./Timeline.css";
+import styles from './Timeline.module.css';
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -15,8 +15,8 @@ export const Timeline = () => {
 
   return (
     <>
-      <div className="section mainsection">
-        <h2 className="section__title" data-aos="fade-left">
+      <div className={`${styles.section} ${styles.mainSection}`}>
+        <h2 className={`${styles.sectionTitle}`} data-aos="fade-center">
           <span className="different">My Timeline</span>
         </h2>
         <VerticalTimeline lineColor={linecolor}>
@@ -36,19 +36,19 @@ export const Timeline = () => {
             icon={<WorkIcon />}
           >
             <h3
-              className="vertical-timeline-element-title"
+              className={styles.verticalTimelineElementTitle}
               data-aos="fade-center"
             >
               Final year project - Artificial Intelligence applied to DNA Translocation
             </h3>
             <h4
-              className="vertical-timeline-element-skills"
+              className={styles.verticalTimelineElementSkills}
               data-aos="fade-center"
             >
               Python, TensorFlow, GitLab
             </h4>
             <h4
-              className="vertical-timeline-element-subtitle"
+              className={styles.verticalTimelineElementSubtitle}
               data-aos="fade-center"
             >
               University Of Birmingham
@@ -74,13 +74,13 @@ export const Timeline = () => {
             icon={<WorkIcon />}
           >
             <h3
-              className="vertical-timeline-element-title"
+              className={styles.verticalTimelineElementTitle}
               data-aos="fade-center"
             >
               Software Engineer - PwC, Simulaton Team
             </h3>
             <h4
-              className="vertical-timeline-element-skills"
+              className={styles.verticalTimelineElementSkills}
               data-aos="fade-center"
             >
               ReactJS, NodeJS, ExpressJS, Python, Git, Java, AnyLogic, Javascript, HTML, CSS, Docker, Kubernetes, Google Cloud Platform
@@ -106,13 +106,13 @@ export const Timeline = () => {
             icon={<WorkIcon />}
           >
             <h3
-              className="vertical-timeline-element-title"
+              className={styles.verticalTimelineElementTitle}
               data-aos="fade-center"
             >
               QA Engineer - PwC, Testing Team
             </h3>
             <h4
-              className="vertical-timeline-element-skills"
+              className={styles.verticalTimelineElementSkills}
               data-aos="fade-center"
             >
               Javascript, Selenium, Testcafe, Manual Testing
@@ -123,7 +123,6 @@ export const Timeline = () => {
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
             date={"2020-2021"}
             contentStyle={{
               boxShadow: `var(--shadow)`,
@@ -139,13 +138,13 @@ export const Timeline = () => {
             icon={<SchoolIcon />}
           >
             <h3
-              className="vertical-timeline-element-title"
+              className={styles.verticalTimelineElementTitle}
               data-aos="fade-center"
             >
               Year Two of Computer Science
             </h3>
             <h4
-              className="vertical-timeline-element-subtitle"
+              className={styles.verticalTimelineElementSubtitle}
               data-aos="fade-center"
             >
               University Of Birmingham
@@ -155,7 +154,6 @@ export const Timeline = () => {
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
             date={"2019-2020"}
             contentStyle={{
               boxShadow: `var(--shadow)`,
@@ -171,13 +169,13 @@ export const Timeline = () => {
             icon={<SchoolIcon />}
           >
             <h3
-              className="vertical-timeline-element-title"
+              className={styles.verticalTimelineElementTitle}
               data-aos="fade-center"
             >
               Year One of Computer Science
             </h3>
             <h4
-              className="vertical-timeline-element-subtitle"
+              className={styles.verticalTimelineElementSubtitle}
               data-aos="fade-center"
             >
               University Of Birmingham
@@ -187,7 +185,6 @@ export const Timeline = () => {
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
             date={"July 2018"}
             contentStyle={{
               boxShadow: `var(--shadow)`,
@@ -203,13 +200,13 @@ export const Timeline = () => {
             icon={<SchoolIcon />}
           >
             <h3
-              className="vertical-timeline-element-title"
+              className={styles.verticalTimelineElementTitle}
               data-aos="fade-center"
             >
               Completed Computer Science, Physics, and Mathematics studies
             </h3>
             <h4
-              className="vertical-timeline-element-subtitle"
+              className={styles.verticalTimelineElementSubtitle}
               data-aos="fade-center"
             >
               <div style={{ padding: "3px" }}></div>
@@ -221,7 +218,6 @@ export const Timeline = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             date={"June 2017 - August 2017"}
-            className="vertical-timeline-element--work"
             contentStyle={{
               boxShadow: `var(--shadow)`,
               backgroundColor: `var(--clr-bg)`,
@@ -236,13 +232,13 @@ export const Timeline = () => {
             icon={<WorkIcon />}
           >
             <h3
-              className="vertical-timeline-element-title"
+              className={styles.verticalTimelineElementTitle}
               data-aos="fade-center"
             >
               Machine Learning Intern
             </h3>
             <h4
-              className="vertical-timeline-element-subtitle"
+              className={styles.verticalTimelineElementSubtitle}
               data-aos="fade-center"
             >
               Rippll - London

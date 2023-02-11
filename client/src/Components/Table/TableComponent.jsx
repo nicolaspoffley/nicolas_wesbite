@@ -1,5 +1,4 @@
 import { useCallback, useState, useEffect } from "react";
-import axios from "axios";
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from "@material-ui/core";
 
 function createData(name, calories, fat, carbs, protein) {
