@@ -1,4 +1,5 @@
 const keys = require("./keys");
+const utils = require('./utils.js');
 
 // Express Application setup
 const express = require("express");
@@ -27,22 +28,22 @@ pgClient.on("connect", client => {
 
 //Express route definitions
 app.get("/", (req, res) => {
-  res.send("Hi");
+  res.send("test route response");
 });
 
 // get the values
 app.get("/values/all", async (req, res) => {
-  const values = await pgClient.query("SELECT * FROM values");
+  const sqlQueries = await utils.loadSqlQueries("sqlQueries");
+ // const values = await pgClient.query("SELECT * FROM values");
+  const values = await pgClient.query(sqlQueries.getValues);
 
   res.send(values);
 });
 
-// now the post -> insert value
+// insert value
 app.post("/values", async (req, res) => {
   if (!req.body.value) res.send({ working: false });
-
   pgClient.query("INSERT INTO values(number) VALUES($1)", [req.body.value]);
-
   res.send({ working: true });
 });
 
