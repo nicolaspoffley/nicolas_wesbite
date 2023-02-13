@@ -24,7 +24,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import organization from "./treeContent.json";
 
 import {
-  createMuiTheme,
+  createTheme,
   makeStyles,
   ThemeProvider
 } from "@material-ui/core/styles";
@@ -84,7 +84,7 @@ function Organization({ org, onCollapse, collapsed }) {
               }}
               showZero
               invisible={!collapsed}
-              overlap="circle"
+              overlap="circular"
               badgeContent={_.size(org.parentChildRelationship)}
               onClick={onCollapse}
             >
@@ -205,13 +205,13 @@ function Node({ o, parent, root }) {
             <TreeNode label={<Product p={a.description} />} />
           </TreeNode>
         ))}
-        {_.map(o.parentChildRelationship, (c) => (
-          <Node o={c} parent={o} root={false} />
+        {_.map(o.parentChildRelationship, (c, index) => (
+          <Node o={c} parent={o} root={false} key={index} />
         ))}
       </T>
     );
 }
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     background: "#fbfebfb"
   },
